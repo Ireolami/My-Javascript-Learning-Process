@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+    <h1>You are welcome to the System</h1>
+    <label for="age-label">Enter your Age</label>
+    <input type="text" id="age">
+    <button onclick="age_confirmation()">Check</button>
+    <h5 id="response"></h5>
+    
+</body>
+<script>
+    // If, and else
+    let age = document.getElementById('age')
+   
+    let response = document.getElementById('response')
+    function age_confirmation(){
+        newage = parseInt(age.value)
+        if(newage<18) {
+            response.textContent= `Sorry you are ${newage} years old, you need to be at least 18 years old to enter this website`
+        }
+        else{
+        response.textContent= `Congratulations, you are old enough to use this website`
+        }
+    }
+</script>
+</html>
