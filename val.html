@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Assignment</title>
+</head>
+<body>
+    <h1>Number Collector</h1>
+    <button onclick="add()" id="add">Click here to increase Value</button>
+    <span id="numvalue">0</span>
+    <button onclick="minus()" id="minus">Click here to increase Value</button>
+</body>
+</html>
+<script>
+let adding = document.getElementById('add')
+let subtract = document.getElementById('minus')
+let num = document.getElementById('numvalue')
+adding.style.backgroundColor='green'
+subtract.style.backgroundColor='red'
+let val = 1
+
+
+function add(){
+    num.innerHTML = ++val
+}
+function minus(){
+    num.innerHTML = --val
+}
+</script>

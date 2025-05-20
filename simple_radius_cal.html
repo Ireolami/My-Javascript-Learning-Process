@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radius Calculator</title>
+</head>
+<body>
+    <div class="div">
+    <h2>Welcome </h2>
+    <label for="rad-cal"><strong>Radius</strong></label>
+    <input type="text" id="rad-cal">
+    <button type="submit" id="cal" onclick="radius()">Calculate</button></div>
+    <p id="result"></p>
+    
+</body>
+</html>
+
+<script>
+    document.body.style.display = 'flex';
+    document.body.style.justifyContent = 'center';
+    document.body.style.alignItems = 'center';
+    document.body.style.height = '100vh';
+    document.body.style.backgroundColor='grey'
+    
+    
+   
+    function radius() {
+        let pi = 3.142
+        let rad = Number(document.getElementById('rad-cal').value)
+        let total = 2 * pi * rad
+        console.log(total)
+        document.getElementById('result').textContent = `The Circumference is: ${total}`
+    }
+
+</script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input onkeydown="writeContent()" id="textValue" type="text">
+    <h1 onclick="alert()" id="specific">My name is Daniel</h1>
+</body>
+</html>
+
+<script>
+    // let var const
+    const gender = "Male"
+    console.log(gender);
+    // gender = "Female"
+    // console.log(gender);
+
+    let age = 10;
+    console.log(age);
+    age = 20;
+    console.log(age);
+
+    //DATA TYPES string number boolean array null undefined object
+
+    let firstAmount = 100
+    let balance = -45
+
+    console.log(firstAmount + balance);
+
+    let strNum = "60";
+    let strNNum2 = 70;
+
+    console.log(strNum + strNNum2);
+
+    console.log(Number(strNum) + strNNum2);
+
+    console.log("I am " + strNNum2 + " years old");
+
+    // let paid = true;
+    console.log(strNNum2 == 70);
+    console.log(strNum === 60);
+
+    let fav;
+    console.log(fav);
+
+    fav = 400;
+    console.log(fav);
+
+    let future = null;
+
+    let hobbies = ["Ola", "Ire", "Daniel"];
+    let courses = new Array("Gbenga", "Ola", "Ire");
+
+    console.log(hobbies[0]);
+    console.log(courses[1]);
+
+    let attrib = {name: "Ola", age: 20, gender: "Male"};
+    console.log(attrib);
+    console.log(attrib.gender);
+
+    // OPERATOR (arithmetic => + - / * % +=, comparism == >= <= !=, logical && ||, assignment =, increment/decrement ++ --, ternary, NOT !, NOR NULL))
+    // EVENT(Functions Event type) DOM(Document object model)
+    document.getElementById("specific").innerHTML = "I am changing the text";
+    document.getElementById("specific").style.backgroundColor = "green";
+    document.getElementById("textValue").style.backgroundColor = "yellow";
+
+    let specific = document.getElementById("specific");
+    let textValue = document.getElementById("textValue");
+
+    function writeContent(){
+        specific.innerHTML = textValue.value;
+    }
+
+    let myAge = 1;
+    myAge++
+    console.log(myAge);
+    // console.log(++myAge);
+    let myAge2 = 2;
+    console.log(++myAge2);
+</script>
