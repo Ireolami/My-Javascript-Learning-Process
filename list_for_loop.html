@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop with Array</title>
+</head>
+<body>
+    <h1>Item needed in the house</h1>
+    <ul id="list">
+        
+    </ul>
+</body>
+<script>
+    let list = ['Water Dispenser', 'Microwave', 'Oven', 'Air Conditioner', 'Car', 'Good Capital', 'Scholarship', 'Marital Settlement'
+
+    ];
+    let each ='';
+    for (let index =0; index < list.length; index++){
+        each += `<li>${list[index]}</li>`
+        
+        
+    }
+    document.getElementById('list').innerHTML=each
+</script>
+</html>
