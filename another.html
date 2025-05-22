@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+</head>
+<style>
+     * {
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #444;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+        border-color: #00bcd4;
+    }
+
+    button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        background-color: #00bcd4;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0097a7;
+    }
+
+    .contain {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #total {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    #grade {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2e7d32;
+    }
+</style>
+<body>
+    
+    <div class="container">
+        <h1>Enter Student's Scores for Grading</h1>
+        <label for="test-1">First Test</label>
+        <input type="text" id="test-1">
+        <label for="test-2">Second Test</label>
+        <input type="text" name="" id="test-2">
+        <label for="practical">Practical</label>
+        <input type="text" id="practical">
+        <label for="exam">Examination</label>
+        <input type="text" id="examination">
+        <button type="submit" onclick="grading()">Grade</button>
+        <div class="contain">
+        <p id="total"></p>
+        <h3 id="grade"></h3>
+         </div>
+    </div>
+    
+    
+</body>
+<script>
+    
+    function grading(){
+        let test1 = Number(document.getElementById('test-1').value)
+        let test2 = Number(document.getElementById('test-2').value)
+        let practical =Number(document.getElementById('practical').value)
+        let examination = Number(document.getElementById('examination').value)
+        let total =document.getElementById('total')
+        let grade= document.getElementById('grade')
+
+        total_score = test1 + test2 + practical + examination
+       switch (true){
+        case total_score >=90:
+            total.innerHTML = `<strong>Your Total Score is ${total_score}</strong>` 
+            total.style.colour = 'green'
+            grade.innerHTML = 'Grade: A'
+            grade.style.colour = 'green'
+            break;
+        case total_score >=80:
+            total.innerHTML = `<strong>Your Total Score is ${total_score}</strong>` 
+            total.style.colour = 'green'
+            grade.innerHTML = 'Grade: B'
+            grade.style.colour = 'green'
+            break;
+        case total_score >=70:
+            total.innerHTML = `<strong>Your Total Score is ${total_score}</strong>` 
+            total.style.colour = 'green'
+            grade.innerHTML = 'Grade: C'
+            grade.style.colour = 'green'
+            break;
+        case total_score >=60:
+            total.innerHTML = `<strong>Your Total Score is ${total_score}</strong>` 
+            total.style.color = 'green'
+            grade.innerHTML = 'Grade: D'
+            grade.style.colour = 'green'
+            break;
+        default:
+            total.innerHTML = `<strong>Your Total Score is ${total_score}</strong>`
+            total.style.color ='red'
+            grade.style.color = 'red'
+            grade.innerHTML = 'Grade: F'
+
+       }
+    }
+</script>
+</html>

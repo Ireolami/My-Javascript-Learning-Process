@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Switch</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Working with Switch</h1>
+        <form action="" >
+            <label for="user-input">Enter Your State of Origin</label>
+            <input type="text" id="user-input">
+            <button type="submit" onclick="verification()">Verify</button>
+        </form>
+    </div>
+</body>
+<script>
+    
+    let user_state = user.value.trim()
+    let southwest = ['Lagos', 'Ogun', 'Oyo', 'Osun', 'Ekiti', 'Edo']
+    let southeast = ['Enugu', 'Ebonyi', 'Imo', 'Abia', 'Rivers']
+    let southsouth = ['Delta', 'Bayelsa', 'Akwa-Ibom', 'Cross-River']
+    let Northeast = ['Bauchi', 'Borno', 'Yobe', 'Gombe', 'Adamawa']
+    let Northwest = ['Zamfara', 'Taraba', 'Katsina', 'Sokoto', 'Kano']
+    let Northcentral = ['Kogi', 'Kwara', 'Plateau', 'Benue', 'Kaduna']
+    let fct = 'Abuja'
+function verification(){
+    let user = document.getElementById('user-input')
+    switch(true){
+        case southwest.includes(user_state):
+            alert('You are from the Southwest')
+            break
+    }
+}
+</script>
+</html>
